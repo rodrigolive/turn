@@ -1,0 +1,41 @@
+
+CMDS
+==============
+
+- server/start
+- schedule
+- rm
+- jobs
+
+MENU
+==========
+
+- Top Combo:
+   - Global
+   - ProjectA
+   - ProjectA/ProjectB
+
+- Jobs
+- Scheduler
+- Rules
+- Packages
+   - Current
+   - Artifacts
+   - Registry (Docker)
+- Environments
+   - Models
+   - Variables
+   - Credentials
+   - Servers
+   - Resources
+- System
+   - Overview
+   - Monitor (Resources/Workers)
+   - Worker
+   - Users
+   - Projects
+   - Plugins
+
+MODELS
+============
+
