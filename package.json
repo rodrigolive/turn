@@ -2,13 +2,24 @@
   "name": "turn",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "turn.js",
+  "bin" : "turn.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkg": "pkg package.json --out-path ./dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "pkg": {
+      "assets": [
+          "config/**/*",
+          "client/**/*"
+      ],
+      "scripts": [
+          "server/**/*.*"
+      ]
+  },
   "dependencies": {
     "antd": "^3.3.3",
     "babel-core": "^6.26.0",

@@ -4,7 +4,7 @@ const path = require("path");
 
 module.exports = {
     mode: "development",
-    entry: ["webpack-hot-middleware/client", "react-hot-loader/patch", "./client/index.jsx"],
+    entry: ["webpack-hot-middleware/client", "react-hot-loader/patch", path( __dirname, "client/index.jsx") ],
     optimization: {
         runtimeChunk: true,
         splitChunks: {

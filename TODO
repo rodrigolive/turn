@@ -1,11 +1,20 @@
+NOTES
+===================
+
+- naming: environments, model or workspaces
+- remote command line: git? curl?
 
 CMDS
 ==============
 
-- server/start
+- run [script|rule]
+- release [package|file]
+- rule [add]
+- server start|stop
 - schedule
 - rm
 - jobs
+- secret add/delete
 
 MENU
 ==========
@@ -39,3 +48,43 @@ MENU
 MODELS
 ============
 
+RUNNING CMDLINE
+==================
+
+turn connect https://myturn:8080
+Username:
+Password:
+[OK] Connected [default] to myturn:8080 and saved to ~/.turnrc
+You can change connections at any time with
+export TURN_SERVER=[name]
+
+turn init
+Initializing workspace ./.turn
+
+turn run ./myscript.sh --project acme --env qa
+turn run "build aws for me" --project acme --env qa
+turn run ansible-playbook --project acme --env qa
+turn run ansible-playbook @acme/qa
+
+turn upload -v 2.1.1 ./app.zip
+turn upload ./app-2.1.1.zip
+turn release -v 2.1.1 --env qa
+
+turn var set acme/qa my_var=value aws_type=ts.micro
+turn var rm acme/qa my_var=value
+turn var list acme/qa
+
+turn secret set acme/qa my_var
+my_var: ******
+
+turn worker add root@server1 user2@server2
+root@server1 password: *****
+user2@server2 password: *****
+
+GIT MGMT
+=============
+
+git remote add turn https://turn.sh/myorg/myprj
+git remote add qa https://turn.sh/myorg/myprj#qa
+
+------------
